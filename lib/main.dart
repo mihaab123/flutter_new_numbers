@@ -63,6 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
           Positioned(
             bottom: 40,
             child: ElevatedButton(
+                style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0),
+                            side: const BorderSide(color: Colors.white)))),
                 onPressed: _incrementCounter,
                 child: const Text(
                   'Change number',
