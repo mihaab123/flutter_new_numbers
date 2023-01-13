@@ -33,18 +33,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String _counter = "";
+  String _number = "";
   var rng = Random();
 
-  void _incrementCounter() {
+  void _changeNumber() {
     setState(() {
-      _counter = (rng.nextDouble() * 10).toStringAsFixed(2);
+      _number = (rng.nextDouble() * 10).toStringAsFixed(2);
     });
   }
 
   @override
   void initState() {
-    _incrementCounter();
+    _changeNumber();
     super.initState();
   }
 
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Center(
             child: Text(
-              _counter,
+              _number,
               style: const TextStyle(color: Colors.white, fontSize: 36),
             ),
           ),
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16.0),
                             side: const BorderSide(color: Colors.white)))),
-                onPressed: _incrementCounter,
+                onPressed: _changeNumber,
                 child: const Text(
                   'Change number',
                   style: TextStyle(color: Colors.white, fontSize: 16),
