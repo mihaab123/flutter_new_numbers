@@ -62,6 +62,13 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Positioned(
+              top: 40,
+              child: Image.asset(
+                "assets/graf.jpg",
+                height: 240.0,
+                fit: BoxFit.cover,
+              )),
+          Positioned(
             bottom: 40,
             child: ElevatedButton(
                 style: ButtonStyle(
@@ -70,9 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderRadius: BorderRadius.circular(16.0),
                             side: const BorderSide(color: Colors.white)))),
                 onPressed: _changeNumber,
-                child: const Text(
-                  'Change number',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 36.0),
+                  child: Text(
+                    'Get',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 )),
           )
         ],
